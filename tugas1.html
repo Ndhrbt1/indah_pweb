@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+</head>
+<body>
+    <h1>Form HTML</h1>
+
+    <form action="proses.php" method="post" enctype="multipart/form-data">
+        <label for="nama">Name:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="jenisKelamin">Gender:</label>
+        <input type="radio" id="lakiLaki" name="jenisKelamin" value="lakiLaki" required>
+        <label for="lakiLaki">Man</label>
+        <input type="radio" id="perempuan" name="jenisKelamin" value="perempuan" required>
+        <label for="perempuan">Woman</label><br><br>
+
+        <label for="alamat">Adress:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+
+        <label for="negara">Country:</label>
+        <select id="negara" name="negara" required>
+            <option value="">Select country...</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="singapura">Singapura</option>
+            <option value="brunei">Brunei Darussalam</option>
+            <option value="thailand">Thailand</option>
+            </select><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <div class="search-container">
+          <label for="foto">Photo:</label>
+          <input type="text" class="search-input" >
+          <button class="browse-button">Browse</button>
+        </div><br>
+
+         <!-- <label for="foto">Photo:</label>
+        <input type="file" id="foto" name="foto" required><br><br>  -->
+
+        <label for="komentar">Comment:</label>
+        <textarea id="komentar" name="komentar"rows="5" cols="40"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
