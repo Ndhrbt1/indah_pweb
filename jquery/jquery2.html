@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color on Double Click</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            /* display: inline-block; */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <h1>Double klik pada masing-masing kotak maka lihat apa yang terjadi:</h1>
+    <div class="box" style="background-color: brown;"></div>
+    <div class="box" style="background-color: blue;"></div>
+    <div class="box" style="background-color: green;"></div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".box").dblclick(function() {
+                var colors = ["red", "blue", "green"];
+                var currentColor = $(this).css("background-color");
+                var currentIndex = colors.indexOf(currentColor);
+                var newIndex = (currentIndex + 1) % colors.length;
+                $(this).css("background-color", colors[newIndex]);
+            });
+        });
+    </script>
+</body>
+</html>

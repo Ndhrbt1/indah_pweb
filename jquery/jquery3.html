@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Fade Animation</title>
+    <style>
+        #container {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            margin: 20px;
+            display: none; /* Mulai dengan display none */
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+  <p>Klik tombol di bawah untuk menerapkan efek fade.</p>
+    <div id="container">
+       
+    </div>
+    <button id="fadeInButton">Fade In</button>
+    <button id="fadeOutButton">Fade Out</button>
+    <button id="fadeToButton">Fade To 0.3s</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#container").fadeIn(300); // Fade in saat halaman dimuat
+
+            $("#fadeInButton").click(function() {
+                $("#container").fadeIn(300); // fade in dengan durasi 0.3 detik
+            });
+
+            $("#fadeOutButton").click(function() {
+                $("#container").fadeOut(300); // fade out dengan durasi 0.3 detik
+            });
+
+            $("#fadeToButton").click(function() {
+                $("#container").fadeTo(300, 0.3); // fade to opacity 0.3 dengan durasi 0.3 detik
+            });
+        });
+    </script>
+</body>
+</html>

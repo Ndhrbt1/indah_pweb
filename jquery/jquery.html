@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show Button with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="toggleButton">Sembunyikan Gambar</button>
+    <br></br>
+    <div id="imageContainer">
+        <img src="assets/images/fadi1.jpeg" alt="Gambar 1">
+        <img src="assets/images/fadi2.jpeg" alt="Gambar 2">
+        <img src="assets/images/fadi3.jpeg" alt="Gambar 3">
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#toggleButton").click(function() {
+                $("#imageContainer img").toggle();
+                var buttonText = $("#toggleButton").text();
+                if (buttonText === "Sembunyikan Gambar") {
+                    $("#toggleButton").text("Tampilkan Gambar");
+                } else {
+                    $("#toggleButton").text("Sembunyikan Gambar");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
