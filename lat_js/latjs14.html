@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <style>
+        input[type="text"] {
+            width: 150px;
+            padding: 5px;
+        }
+        input[type="button"] {
+            width: 40px;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" id="bil1" placeholder="Bilangan 1">
+<input type="text" id="bil2" placeholder="Bilangan 2">
+<input type="button" value="+" onclick="tambah()">
+<input type="button" value="-" onclick="kurang()">
+<input type="button" value="x" onclick="kali()">
+<input type="button" value="/" onclick="bagi()">
+<input type="text" id="hasil" placeholder="Hasil">
+
+<script>
+    function tambah() {
+        var bil1 = parseFloat(document.getElementById('bil1').value);
+        var bil2 = parseFloat(document.getElementById('bil2').value);
+        var hasil = bil1 + bil2;
+        document.getElementById('hasil').value = hasil;
+    }
+
+    function kurang() {
+        var bil1 = parseFloat(document.getElementById('bil1').value);
+        var bil2 = parseFloat(document.getElementById('bil2').value);
+        var hasil = bil1 - bil2;
+        document.getElementById('hasil').value = hasil;
+    }
+
+    function kali() {
+        var bil1 = parseFloat(document.getElementById('bil1').value);
+        var bil2 = parseFloat(document.getElementById('bil2').value);
+        var hasil = bil1 * bil2;
+        document.getElementById('hasil').value = hasil;
+    }
+
+    function bagi() {
+        var bil1 = parseFloat(document.getElementById('bil1').value);
+        var bil2 = parseFloat(document.getElementById('bil2').value);
+        if (bil2 !== 0) {
+            var hasil = bil1 / bil2;
+            document.getElementById('hasil').value = hasil;
+        } else {
+            alert("Error: Bilangan kedua tidak boleh nol!");
+        }
+    }
+</script>
+
+</body>
+</html>
